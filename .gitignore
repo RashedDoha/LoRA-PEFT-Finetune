@@ -1,0 +1,84 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+wheels/
+*.egg
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.local
+.env.*.local
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing and linting
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+
+# Machine Learning / Model artifacts
+models/
+checkpoints/
+outputs/
+runs/
+wandb/
+lightning_logs/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.pkl
+*.pickle
+
+# Data files (uncomment if needed)
+# data/raw/
+# data/processed/
+
+# IDE specific
+.ipynb
+*.log
+*.pot
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+$RECYCLE.BIN/
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Poetry
+poetry.lock
+
+# uv
+uv.lock
