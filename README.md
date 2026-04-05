@@ -10,5 +10,5 @@ This repo performs a simple peft process on a base llm. The following environmen
 
 ---
 
-The training script relies on Supervised fine tuning (SFT) using the `trl` python library. All configurations should be passed as command line arguments to `train.py`.
+The training script relies on Supervised fine tuning (SFT) using the `trl` python library.
 
