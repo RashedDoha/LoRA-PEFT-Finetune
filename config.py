@@ -5,7 +5,7 @@ import os
 
 import torch
 from transformers import BitsAndBytesConfig
-from peft import LoraConfig, TaskType, get_peft_model
+from peft import LoraConfig, TaskType
 
 
 load_dotenv()
@@ -19,6 +19,7 @@ class Settings:
     lora_rank: int = int(os.getenv("LORA_RANK", "16"))
     lora_alpha: int = int(os.getenv("LORA_ALPHA", "32"))
     lora_dropout: float = float(os.getenv("LORA_DROPOUT", "0.05"))
+    max_length: int = int(os.getenv("MAX_SEQ_LENGTH", "512"))
 
 
 def get_settings() -> Settings:
