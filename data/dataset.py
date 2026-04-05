@@ -11,7 +11,3 @@ def get_dataset() -> DatasetDict:
 def get_train_dataset() -> Dataset:
     dataset = get_dataset()
     return dataset["train"]
-
-def get_eval_dataset() -> Dataset:
-    dataset = get_dataset()
-    return dataset["test"]

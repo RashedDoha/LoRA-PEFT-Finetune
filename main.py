@@ -1,4 +1,4 @@
-from data import get_train_dataset, get_eval_dataset
+from data import get_train_dataset
 from model import get_model, get_tokenizer
 from prompt import format_example
 from trl.trainer.sft_trainer import SFTTrainer
@@ -12,13 +12,8 @@ if __name__ == "__main__":
     model = get_model()
     tokenizer = get_tokenizer()
     train_dataset = get_train_dataset()
-    eval_dataset = get_eval_dataset()
 
-    def preprocess_function(examples):
-        return format_example(examples)
-
-    train_dataset = train_dataset.map(preprocess_function, batched=True)
-    eval_dataset = eval_dataset.map(preprocess_function, batched=True)
+    dataset = train_dataset.map(format_example)
 
     training_args = SFTConfig(
         output_dir=settings.output_dir,
@@ -38,8 +33,7 @@ if __name__ == "__main__":
 
     trainer = SFTTrainer(
         model=model,
-        train_dataset=train_dataset,
-        eval_dataset=eval_dataset,
+        train_dataset=dataset,
         processing_class=tokenizer,
         args=training_args,
         peft_config=lora_config
