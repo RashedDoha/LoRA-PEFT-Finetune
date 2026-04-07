@@ -1,3 +1,3 @@
-from .template import format_example
+from .template import format_example, get_prompt_template
 
-__all__ = ["format_example"]
+__all__ = ["format_example", "get_prompt_template"]

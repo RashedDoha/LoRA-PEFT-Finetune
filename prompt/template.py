@@ -1,11 +1,14 @@
-PROMPT_TEMPLATE = """### Instruction:
+PROMPT_TEMPLATE = """### নির্দেশনা:
 {instruction}
 
-### Input:
+### ইনপুট:
 {input}
 
-### Response:
+### উত্তর:
 {output}"""
+
+def get_prompt_template():
+    return PROMPT_TEMPLATE
 
 def format_example(example):
     return {
