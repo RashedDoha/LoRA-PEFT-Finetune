@@ -24,12 +24,7 @@ class LoraSettings:
     rank: int = int(os.getenv("LORA_RANK", "16"))
     alpha: int = int(os.getenv("LORA_ALPHA", "32"))
     dropout: float = float(os.getenv("LORA_DROPOUT", "0.05"))
-    target_modules: list[str] = field(
-        default_factory=lambda: [
-            "q_proj", "k_proj", "v_proj", "o_proj",
-            "gate_proj", "up_proj", "down_proj",
-        ]
-    )
+    target_modules: str = r".*\.language_model.*\.(q_proj|k_proj|v_proj)"
 
 
 @dataclass
